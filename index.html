@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte de Atención Lectores</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    
+    <div class="header">
+      <img src="gersalogo.png" alt="Logo" class="logo">
+      <h1>Reporte de Atención Lectores</h1>
+    </div>
+    
+
+    <div class="row">
+      <div class="form-group">
+        <label for="branch-number">No. Sucursal:</label>
+        <input type="text" id="branch-number" placeholder="Ingrese el número de la sucursal">
+      </div>
+      <div class="form-group">
+        <label for="branch-name">Sucursal:</label>
+        <input type="text" id="branch-name" placeholder="Nombre de la sucursal" readonly>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <label for="report-date">Fecha de Reporte:</label>
+        <input type="date" id="report-date">
+      </div>
+      <div class="form-group">
+        <label for="attention-date">Fecha de Atención:</label>
+        <input type="date" id="attention-date">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="days-attended">Días de Atención:</label>
+      <input type="number" id="days-attended" readonly>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <label for="response">Respuesta o Solución:</label>
+        <select id="response">
+          <option value="">Seleccione una opción</option>
+          <option value="Se solicitó extraccion de licencia">Se solicitó extraccion de licencia</option>
+          <option value="Se activó licencia">Se activó licencia</option>
+          <option value="Se reemplazará lector de huellas">Se reemplazará lector de huellas</option>
+          <option value="Se envió el lector de huellas">Se envió el lector de huellas</option>
+          <option value="Se instaló el lector de huellas">Se instaló el lector de huellas</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="status">Estatus:</label>
+        <select id="status">
+          <option value="">Seleccione una opción</option>
+          <option value="Pendiente">Pendiente</option>
+          <option value="Concluido">Concluido</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button id="add-branch">Cargar Sucursal</button>
+    </div>
+
+    <table class="preview-table">
+      <thead>
+        <tr>
+          <th>Sucursal</th>
+          <th>Fecha de Reporte</th>
+          <th>Fecha de Atención</th>
+          <th>Días de Atención</th>
+          <th>Respuesta</th>
+          <th>Estatus</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="preview-body">
+      </tbody>
+    </table>
+
+    <div class="form-group">
+      <button id="generate-report">Generar Reporte</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+</body>
+</html>
