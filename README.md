@@ -34,10 +34,10 @@ Para iniciar un servidor local, si tienes **Python** instalado, sigue estos paso
    ```bash
    cd /ruta/a/tu/proyecto
 
-2. Si usas Python 3.x usa el siguiente comandop:
-   python3 -m http.server 8000
+2. Si usas Python 3.x usa el siguiente comando:
+   'python3 -m http.server 8000'
 
-3. Una vez que se ejecute puedes acceder al proyecto usando la direccion:
-     http://localhost:8000
+4. Una vez que se ejecute puedes acceder al proyecto usando la direccion:
+     'http://localhost:8000'
 
 
